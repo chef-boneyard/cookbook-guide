@@ -1,0 +1,9 @@
+Chef does not require that contributors sign a contributor license agreement (CLA) in order to contribute to the documentation.
+
+If you would like to contribute, please do one of the following:
+
+1) For simple changes, please use pull requests.
+
+2) Use branches for more complex changes, longer topics, and so on. In general, if the changes are within a single topic, using a pull request is just fine.
+
+Chef will handle the version updates during the release process. You are welcome to correct typos or otherwise make updates to documentation in the README.
