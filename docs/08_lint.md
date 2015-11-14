@@ -1,4 +1,4 @@
-# How do we Test our Cookbook? Lint #
+## How do we Test our Cookbook? Linting
 * Foodcritic
  * Chef style guide for cookbooks
  * <https://www.foodcritic.io>

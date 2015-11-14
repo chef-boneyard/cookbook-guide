@@ -1,4 +1,4 @@
-# How do we Test our Cookbook? Integration Tests #
+## How do we Test our Cookbook? Integration Tests
 * Test Kitchen
 * Integration test with "real" machines
 * Tests on each supported platform

@@ -1,4 +1,4 @@
-# Custom Resources #
+## Custom Resources
 * Develop against Chef 12.5 or later
 * Safely abstract away messy CLI or API calls
 * Manage complexity and scope

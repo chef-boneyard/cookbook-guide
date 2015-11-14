@@ -1,4 +1,4 @@
-# How do we Test our Cookbook? Unit Tests #
+## How do we Test our Cookbook? Unit Tests
 * ChefSpec
  * Chef-specific unit tests, extension of rspec
  * Use to test logic of cookbooks

@@ -1,4 +1,4 @@
-# Other Things We Look For #
+## Other Things We Look For
 * Semantic versioning observed
 * Use Chef's built-in Resources
 * Windows support and testing where applicable

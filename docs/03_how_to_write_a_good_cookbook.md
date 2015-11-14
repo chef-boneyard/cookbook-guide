@@ -1,4 +1,4 @@
-# How to Write a "Good" Cookbook #
+## How to Write a "Good" Cookbook
 * "Good" is subjective, but there are guidelines to do better
 * Chef's Partner Engineering is here to help
 * Use the ChefDK

@@ -1,4 +1,4 @@
-# How do we Test our Cookbook? Ruby Style #
+## How do we Test our Cookbook? Ruby Style
 * Rubocop
 * Ruby static code analyzer and style enforcement
  * Community Ruby style guide, which is still very subjective

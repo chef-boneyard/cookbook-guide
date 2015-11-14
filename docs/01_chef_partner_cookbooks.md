@@ -1,4 +1,5 @@
-# Chef Partner Cookbooks #
+# Chef Partner Cookbooks
+
 Chef's Partner Engineering Team
 
-partnereng@chef.io
+<partnereng@chef.io>

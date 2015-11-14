@@ -1,4 +1,4 @@
-# Chef's Partner Engineering #
+## Chef's Partner Engineering
 * We're here to help!
 * Discuss proposed cookbook features
 * Provide examples and documentation

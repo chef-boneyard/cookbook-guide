@@ -1,4 +1,4 @@
-# Hosted Testing Tools #
+## Hosted Testing Tools
 * These may be configured to automatically test incoming PRs on GitHub
 * Code Climate
  * Checks code quality and runs automated tools

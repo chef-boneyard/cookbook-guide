@@ -1,4 +1,4 @@
-# Supermarket #
+## Supermarket
 * Chef's community site for sharing cookbooks
  * and other extensions
 * <https://supermarket.chef.io>
