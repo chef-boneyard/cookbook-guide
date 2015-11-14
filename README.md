@@ -4,11 +4,15 @@ This is Chef's Partner Engineering guide for writing cookbooks. It is intended t
 These guidelines are a living document, so feel free to send PRs and we'll discuss and incorporate the feedback.
 
 # Viewing the Presentation #
-The format is [reveal.js](https://github.com/hakimel/reveal.js) to view the deck:
-INSTRUCTIONS GO HERE
+The format is [reveal-md](https://github.com/webpro/reveal-md). You may use Vagrant and virtualbox to view the presentation without installing reveal-md and its dependencies. To view the deck:
+* Install [Vagrant](https://vagrantup.com)
+* Install [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
+* `export VAGRANT_DEFAULT_PROVIDER=virtualbox`
+* `vagrant up guide`
+* Open up <http://127.0.0.1:1948/index.md> and you're in the presentation.
 
 ## Updating the Presentation #
-INSTRUCTIONS GO HERE
+The content is the Markdown files in the [docs](docs) directory, but the `index.md` is dynamically generated inside the [Vagrantfile](Vagrantfile). You may `vagrant ssh guide` in and change the running command to point to the `/vagrant/docs/` directory and edit these and refresh your browser to see the content update. You may also `vagrant provision guide` if you want to refresh everything without destroying the VM.
 
 # Exporting to PDF #
 INSTRUCTIONS GO HERE
