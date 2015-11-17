@@ -12,5 +12,15 @@ The format is [reveal-md](https://github.com/webpro/reveal-md). You may use Vagr
 * Open up <http://127.0.0.1:1948/index.md> and you're in the presentation.
 * You may download the slides from the last slide or directly from <http://127.0.0.1:1948/cookbook-guide.pdf>
 
+## Building Locally #
+If you prefer to work with reveal-md directly instead of the Vagrant workflow, you can read the shell provisioner section of the [Vagrantfile](Vagrantfile#L8). The steps are
+* Install npm and phantomjs
+* Configuring the npm registry and install reveal-md
+* cat the [docs](docs) contents to a single file with a separator for reveal-md
+* Add a final "Thanks" page to the slides
+* generate the PDF
+* Add the PDF link in the slides
+* launch reveal-md pointing to the slides
+
 ## Updating the Presentation #
 The content is the Markdown files in the [docs](docs) directory, but the `index.md` is dynamically generated inside the [Vagrantfile](Vagrantfile). You may `vagrant ssh guide` in and change the running command to point to the `/vagrant/docs/` directory and edit these and refresh your browser to see the content update. You may also `vagrant provision guide` if you want to refresh everything without destroying the VM.
