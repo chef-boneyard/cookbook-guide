@@ -5,5 +5,5 @@
 * Attributes defined and documented in the `attributes/default.rb`
 * Idempotent recipes
  * Recipes requiring multiple runs are generally discouraged
- * Run the recipes twice to catch non-idempotent behavior (`kitchen converge`)
+ * Run the recipes twice to catch non-idempotent behavior
 * Private Recipes are generally a good pattern
