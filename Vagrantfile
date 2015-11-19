@@ -14,6 +14,7 @@ Vagrant.configure(2) do |config|
       cp /vagrant/docs/reveal.json /tmp/
       for each in /vagrant/docs/*.md; do cat $each; echo -e "\n---\n"; done > /tmp/index.md
       echo -e "# Thanks\!\nChef's Partner Engineering Team\n\n<partnereng@chef.io>" >> /tmp/index.md
+      sleep 5
       nodejs ./node_modules/.bin/reveal-md /tmp/index.md --theme chef --print /tmp/cookbook-guide.pdf
       echo -e "\n[Download PDF of the slides](cookbook-guide.pdf)" >> /tmp/index.md
       nodejs ./node_modules/.bin/reveal-md /tmp/index.md --theme chef
