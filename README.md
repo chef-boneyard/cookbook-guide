@@ -23,4 +23,4 @@ If you prefer to work with reveal-md directly instead of the Vagrant workflow, y
 * launch reveal-md pointing to the slides
 
 ## Updating the Presentation #
-The content is the Markdown files in the [docs](docs) directory, but the `index.md` is dynamically generated inside the [Vagrantfile](Vagrantfile). You may `vagrant ssh guide` in and change the running command to point to the `/vagrant/docs/` directory and edit these and refresh your browser to see the content update. You may also `vagrant provision guide` if you want to refresh everything without destroying the VM.
+The content is the Markdown files in the [docs](docs) directory, but the `index.md` is dynamically generated inside the [Vagrantfile](Vagrantfile). You may `vagrant ssh guide` in and change the running command to point to the `/vagrant/docs/` directory and edit these and refresh your browser to see the content update. You may also `vagrant provision guide` if you want to refresh everything without destroying the VM. The file [docs/theme/chef.css](chef.css) controls the styling for the presentation.
