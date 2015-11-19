@@ -11,6 +11,7 @@ Vagrant.configure(2) do |config|
       npm install reveal-md
       cp /vagrant/docs/theme/chef.css /home/vagrant/node_modules/reveal-md/node_modules/reveal.js/css/theme/
       cp /vagrant/docs/theme/chef.css /home/vagrant/node_modules/reveal-md/node_modules/reveal.js/css/theme/source/
+      cp /vagrant/docs/reveal.json /tmp/
       for each in /vagrant/docs/*.md; do cat $each; echo -e "\n---\n"; done > /tmp/index.md
       echo -e "# Thanks\!\nChef's Partner Engineering Team\n\n<partnereng@chef.io>" >> /tmp/index.md
       nodejs ./node_modules/.bin/reveal-md /tmp/index.md --theme chef --print /tmp/cookbook-guide.pdf
