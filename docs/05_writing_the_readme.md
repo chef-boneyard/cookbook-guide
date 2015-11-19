@@ -1,4 +1,4 @@
-## Constructing the README
+## Writing the README
 * Fill in the `chef generate cookbook`'s `README.md`
 * Add a `SCOPE` of what it does and what it doesn't do
 * List the `REQUIREMENTS` for using this cookbook successfully
