@@ -1,0 +1,6 @@
+name 'bootstrap'
+maintainer 'Partner Engineering from Chef, Inc.'
+maintainer_email 'partnereng@chef.io'
+license 'Apache 2.0'
+description 'Bootstraps the cookbook-guide vm'
+version '1.0.0'
