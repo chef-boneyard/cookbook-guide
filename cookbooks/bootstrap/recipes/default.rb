@@ -7,39 +7,39 @@
 #                          - Han Solo
 #
 
-cookbook_file "/tmp/reveal.json" do
-  owner "vagrant"
-  mode "0644"
-  source 'reveal.json'
-end
-
-git "/home/vagrant/" do
-  repository "https://github.com/chef-partners/cookbook-guide.git"
-  reference "master"
-    action :sync
-end
-
-execute 'Get the markdowns to the correct location' do
-  cwd '/home/vagrant'
-  user 'vagrant'
-  command 'for each in /vagrant/docs/*.md; do cat $each; echo "\n---\n"; done > /tmp/index.md'
-  creates '/tmp/index.md'
+execute "Update the apt-cache" do
+  command "sudo apt-get update"
   action :run
 end
 
-execute 'Update the apt-cache' do
-  command 'sudo apt-get update'
-  action :run
-end
-
-%w(phantomjs npm daemon).each do |pkg|
+%w{phantomjs npm daemon git}.each do |pkg|
   package pkg do
     action [:install]
   end
 end
 
-bash 'set up npm' do
-  creates 'maybe'
+cookbook_file "/tmp/reveal.json" do
+  owner "vagrant"
+  mode "0644"
+  source "reveal.json"
+end
+
+git "/home/vagrant/cookbook-guide" do
+  repository "https://github.com/chef-partners/cookbook-guide.git"
+  reference "master"
+  action :checkout
+end
+
+execute "Get the markdowns to the correct location" do
+  cwd "/home/vagrant"
+  user "vagrant"
+  command 'for each in /home/vagrant/cookbook-guide/docs/*.md; do cat $each; echo "\n---\n"; done > /tmp/index.md'
+  creates "/tmp/index.md"
+  action :run
+end
+
+bash "set up npm" do
+  creates "maybe"
   code <<-EOH
     STATUS=0
     npm config set registry || STATUS=1
@@ -47,28 +47,28 @@ bash 'set up npm' do
   EOH
 end
 
-execute 'install reveal-md' do
-  cwd '/home/vagrant'
-  creates '/usr/local/bin/reveal-md'
-  command 'npm install -g reveal-md'
+execute "install reveal-md" do
+  cwd "/home/vagrant"
+  creates "/usr/local/bin/reveal-md"
+  command "npm install -g reveal-md"
   action :run
 end
 
-execute 'Copy the chef.css to the correct location' do
-  command 'cp /vagrant/docs/theme/chef.css /usr/local/lib/node_modules/reveal-md/node_modules/reveal.js/css/theme/'
-  creates '/usr/local/lib/node_modules/reveal-md/node_modules/reveal.js/reveal.js/css/theme/chef.css'
+execute "Copy the chef.css to the correct location" do
+  command "cp /home/vagrant/cookbook-guide/docs/theme/chef.css /usr/local/lib/node_modules/reveal-md/node_modules/reveal.js/css/theme/"
+  creates "/usr/local/lib/node_modules/reveal-md/node_modules/reveal.js/reveal.js/css/theme/chef.css"
   action :run
 end
 
-execute 'Copy the chef.css for reveal.js' do
-  command 'cp /vagrant/docs/theme/chef.css /usr/local/lib/node_modules/reveal-md/node_modules/reveal.js/css/theme/source'
-  creates '/usr/local/lib/node_modules/reveal-md/node_modules/reveal.js/reveal.js/css/theme/source/chef.css'
+execute "Copy the chef.css for reveal.js" do
+  command "cp /home/vagrant/cookbook-guide/docs/theme/chef.css /usr/local/lib/node_modules/reveal-md/node_modules/reveal.js/css/theme/source"
+  creates "/usr/local/lib/node_modules/reveal-md/node_modules/reveal.js/reveal.js/css/theme/source/chef.css"
   action :run
 end
 
-bash 'Adding some notes' do
-  user 'vagrant'
-  cwd '/home/vagrant'
+bash "Adding some notes" do
+  user "vagrant"
+  cwd "/home/vagrant"
   code <<-EOH
     STATUS=0
     echo -e "# Thanks\!\nChef's Partner Engineering Team\n\n<partnereng@chef.io>" >> /tmp/index.md  || STATUS=1
@@ -77,24 +77,24 @@ bash 'Adding some notes' do
   EOH
 end
 
-cookbook_file '/etc/init.d/nodeserver' do
+cookbook_file "/etc/init.d/nodeserver" do
   mode 755
-  source 'nodeserver'
+  source "nodeserver"
 end
 
-cookbook_file '/etc/init.d/nodeprinter' do
+cookbook_file "/etc/init.d/nodeprinter" do
   mode 755
-  source 'nodeprinter'
+  source "nodeprinter"
 end
 
-service 'nodeprinter' do
+service "nodeprinter" do
   supports restart: true, start: true, stop: true, reload: true
   action [:enable, :start]
 end
 
-service 'nodeserver' do
+service "nodeserver" do
   supports restart: true, start: true, stop: true, reload: true
   action [:enable, :start]
 end
 
-log 'Open up http://127.0.0.1:1948/index.md in a web browser and you are in the presentation.'
+log "Open up http://127.0.0.1:1948/index.md in a web browser and you are in the presentation."

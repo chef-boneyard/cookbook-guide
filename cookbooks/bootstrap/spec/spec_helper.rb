@@ -1,3 +1,3 @@
-require 'chefspec'
-require 'chefspec/berkshelf'
+require "chefspec"
+require "chefspec/berkshelf"
 ChefSpec::Coverage.start!
