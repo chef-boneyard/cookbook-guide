@@ -13,6 +13,12 @@ cookbook_file "/tmp/reveal.json" do
   source 'reveal.json'
 end
 
+git "/home/vagrant/" do
+  repository "https://github.com/chef-partners/cookbook-guide.git"
+  reference "master"
+    action :sync
+end
+
 execute 'Get the markdowns to the correct location' do
   cwd '/home/vagrant'
   user 'vagrant'
