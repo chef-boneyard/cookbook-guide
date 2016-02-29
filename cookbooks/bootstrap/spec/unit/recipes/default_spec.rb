@@ -23,6 +23,10 @@ describe 'bootstrap::default' do
       expect(chef_run).to run_execute('Copy reveal.json to /tmp')
     end
 
+    it 'syncs a git the docs down' do
+      expect(chef_run).to sync_git('/home/vagrant')
+    end
+
     it 'Get the markdowns to the correct location' do
       expect(chef_run).to run_execute('Get the markdowns to the correct location')
     end

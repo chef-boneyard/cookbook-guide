@@ -17,3 +17,7 @@ describe port(1948) do
   it { should be_listening }
   its('protocols') {should include 'tcp'}
 end
+
+describe directory('/home/vagrant/cookbook-guide/.git') do
+  it { should be_directory }
+end
