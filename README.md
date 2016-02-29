@@ -26,7 +26,7 @@ its dependencies. To view the deck:
 If you prefer to work with reveal-md directly instead of the Vagrant workflow,
 you can use `chef-solo` to bootstrap the cookbook. TODO: chef-solo command here.
 
-If you would like to do it by hand, these are the steps:
+If you would prefer the manual steps:
 
 * Install npm and phantomjs
 * Configuring the npm registry and install reveal-md
