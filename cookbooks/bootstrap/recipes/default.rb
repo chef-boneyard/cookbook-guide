@@ -7,12 +7,10 @@
 #                          - Han Solo
 #
 
-execute 'Copy reveal.json to /tmp' do
-  cwd '/home/vagrant'
-  user 'vagrant'
-  command 'cp /vagrant/docs/reveal.json /tmp/'
-  creates '/tmp/reveal.json'
-  action :run
+cookbook_file "/tmp/reveal.json" do
+  owner "vagrant"
+  mode "0644"
+  source 'reveal.json'
 end
 
 execute 'Get the markdowns to the correct location' do
