@@ -24,7 +24,12 @@ its dependencies. To view the deck:
 ## Building Locally
 
 If you prefer to work with reveal-md directly instead of the Vagrant workflow,
-you can use `chef-solo` to bootstrap the cookbook. TODO: chef-solo command here.
+you can use `chef-solo` to bootstrap the cookbook. NOTE: this is only on Ubuntu
+at this time.
+
+```shell
+$ sudo chef-solo -c solo.rb -j node.json
+```
 
 If you would prefer the manual steps:
 
