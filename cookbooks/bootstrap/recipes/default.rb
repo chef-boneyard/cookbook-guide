@@ -97,4 +97,7 @@ service "nodeserver" do
   action [:enable, :start]
 end
 
-log "Open up http://127.0.0.1:1948/index.md in a web browser and you are in the presentation."
+log 'Notice to user' do
+  message "\n\n##############################################################################\nOpen up http://127.0.0.1:1948/index.md in a web browser and you are in the presentation. \n##############################################################################"
+  level :info
+end
