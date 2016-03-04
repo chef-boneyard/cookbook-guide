@@ -1,0 +1,19 @@
+driver:
+  name: vagrant
+  network:
+    - ["forwarded_port", {guest: 1948, host: 1948, auto_correct: true}]
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: latest
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[bootstrap::default]

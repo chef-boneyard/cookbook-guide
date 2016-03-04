@@ -1,0 +1,71 @@
+#!/bin/sh
+
+# This script will launch Nodejs in a mode that will automatically respawn if it
+# crashes. Output will be sent to /var/log/nodejs/nodejs.log. A PID file will be
+# created in the standard location.
+
+start () {
+    echo -n "Starting nodejs server..."
+
+    # Start daemon
+    daemon --chdir='/home/vagrant/' --command "/usr/bin/nodejs /usr/local/bin/reveal-md /tmp/index.md --theme chef" --respawn --output=/var/log/nodejs/nodejs.log --name=nodejs --verbose
+
+    RETVAL=$?
+    if [ $RETVAL = 0 ]
+    then
+        echo "done."
+    else
+        echo "failed. See error code for more information."
+    fi
+    return $RETVAL
+}
+
+stop () {
+    # Stop daemon
+    echo -n "Stopping nodejs..."
+
+    daemon --stop --name=nodejs  --verbose
+    RETVAL=$?
+
+    if [ $RETVAL = 0 ]
+    then
+        echo "Done."
+    else
+        echo "Failed. See error code for more information."
+    fi
+    return $RETVAL
+}
+
+
+restart () {
+    daemon --restart --name=nodejs  --verbose
+}
+
+
+status () {
+    # Report on the status of the daemon
+    daemon --running --verbose --name=nodejs
+    return $?
+}
+
+
+case "$1" in
+    start)
+        start
+    ;;
+    status)
+        status
+    ;;
+    stop)
+        stop
+    ;;
+    restart)
+        restart
+    ;;
+    *)
+        echo $"Usage: nodejs {start|status|stop|restart}"
+        exit 3
+    ;;
+esac
+
+exit $RETVAL
