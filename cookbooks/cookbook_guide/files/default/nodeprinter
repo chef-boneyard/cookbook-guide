@@ -8,7 +8,7 @@ start () {
     echo -n "Starting nodeprinter server..."
 
     # Start daemon
-    daemon --chdir='/home/vagrant/' --command "/usr/bin/nodejs /usr/local/bin/reveal-md /tmp/index.md --theme chef --print /tmp/cookbook-guide.pdf" --output=/var/log/nodeprinter/nodeprinter.log --name=nodeprinter --verbose
+    daemon --chdir='/home/vagrant/' --command "/usr/bin/nodejs /usr/bin/reveal-md /tmp/index.md --theme chef --print /tmp/cookbook-guide.pdf" --output=/var/log/nodeprinter/nodeprinter.log --name=nodeprinter --verbose
 
     RETVAL=$?
     if [ $RETVAL = 0 ]

@@ -5,7 +5,7 @@ Vagrant.configure(2) do |config|
     g.vm.provider "virtualbox"
     g.vm.network :forwarded_port, guest: 1948, host: 1948
     g.vm.provision "chef_solo" do |chef|
-      chef.add_recipe "bootstrap"
+      chef.add_recipe "cookbook_guide"
     end
   end
 end
