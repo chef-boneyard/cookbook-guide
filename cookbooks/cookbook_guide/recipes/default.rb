@@ -89,7 +89,7 @@ cookbook_file "/etc/init.d/nodeserver" do
   source "nodeserver"
 end
 
-execute "create pdf" do
+execute "create pdf for presentation" do
   cwd "/tmp/"
   creates "/tmp/cookbook-guide.pdf"
   command "reveal-md /tmp/index.md --print cookbook-guide.pdf"
