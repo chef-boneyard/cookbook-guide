@@ -1,4 +1,4 @@
-name "bootstrap"
+name "cookbook_guide"
 maintainer "Partner Engineering from Chef, Inc."
 maintainer_email "partnereng@chef.io"
 license "Apache 2.0"

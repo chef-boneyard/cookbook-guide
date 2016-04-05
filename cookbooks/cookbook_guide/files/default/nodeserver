@@ -8,7 +8,7 @@ start () {
     echo -n "Starting nodejs server..."
 
     # Start daemon
-    daemon --chdir='/home/vagrant/' --command "/usr/bin/nodejs /usr/local/bin/reveal-md /tmp/index.md --theme chef" --respawn --output=/var/log/nodejs/nodejs.log --name=nodejs --verbose
+    daemon --chdir='/home/vagrant/' --command "/usr/bin/nodejs /usr/bin/reveal-md /tmp/index.md --theme chef" --respawn --output=/var/log/nodejs/nodejs.log --name=nodejs --verbose
 
     RETVAL=$?
     if [ $RETVAL = 0 ]
