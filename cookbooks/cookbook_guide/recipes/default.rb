@@ -14,7 +14,16 @@ execute "Update the apt-cache" do
   action :run
 end
 
-%w{nodejs phantomjs daemon git build-essential}.each do |pkg|
+package 'nodejs' do
+  action [:install]
+end
+
+execute "Update fix-missing because well reasons" do
+  command "sudo apt-get update --fix-missing"
+  action :run
+end
+
+%w{phantomjs daemon git build-essential}.each do |pkg|
   package pkg do
     action [:install]
   end
