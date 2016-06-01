@@ -8,6 +8,8 @@ Vagrant.configure(2) do |config|
     g.vm.provision "chef_zero" do |chef|
       chef.cookbooks_path = "cookbooks"
       chef.nodes_path = "nodes"
+
+      chef.add_recipe "cookbook_guide"
     end
   end
 end
