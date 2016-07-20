@@ -21,7 +21,7 @@ its dependencies. To view the deck:
 * Open up <http://127.0.0.1:1948/index.md> and you're in the presentation.
 * You may download the slides from the last slide or directly from <http://127.0.0.1:1948/cookbook-guide.pdf>
 
-## Building Locally
+## Building Locally with Chef
 
 If you prefer to work with reveal-md directly instead of the Vagrant workflow,
 you can use `chef-solo` to bootstrap the cookbook. NOTE: this is only on Ubuntu
@@ -40,6 +40,43 @@ If you would prefer the manual steps:
 * generate the PDF
 * Add the PDF link in the slides
 * launch reveal-md pointing to the slides
+
+## Building the Docker container
+
+I added a [Dockerfile](./Dockerfile) because spinning up the Vagrant box felt slow.
+
+You can also pull from the [docker hub](docker.io/jjasghar/chef-partner-cookbook-guide) with the following:
+
+```bash
+$ docker pull jjasghar/chef-partner-cookbook-guide:latest
+$ docker run -p 1948:1948 --name='chef-partner-cookbook-guide' -d jjasghar/chef-partner-cookbook-guide
+$ open http://localhost:1948/index.md
+```
+
+Or if you'd prefer here are the steps to build the container locally:
+
+```bash
+$ git clone http://github.com/chef-partners/cookbook-guide
+$ cd cookbook-guide
+```
+
+Build the image yourself.
+
+```
+$ docker build -t="$USER/chef-partner-cookbook-guide" .
+```
+
+After it's built, all you have to do is:
+
+```
+$ docker run -p 1948:1948 --name='cookbook-guide' -d $USER/chef-partner-cookbook-guide
+```
+
+Now you should be able to go to http://localhost:1948/index.md and see the presentation.
+
+## Building a Habitat Plan.
+
+TODO: I'm in the process of figuring this out :metal:
 
 ## Updating the Presentation
 
