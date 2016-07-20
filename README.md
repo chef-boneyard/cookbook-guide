@@ -45,7 +45,7 @@ If you would prefer the manual steps:
 
 I added a [Dockerfile](./Dockerfile) because spinning up the Vagrant box felt slow.
 
-You can also pull from the [docker hub](docker.io/jjasghar/chef-partner-cookbook-guide) with the following:
+You can also pull from the [docker hub](https://hub.docker.com/r/jjasghar/chef-partner-cookbook-guide/) with the following:
 
 ```bash
 $ docker pull jjasghar/chef-partner-cookbook-guide:latest
