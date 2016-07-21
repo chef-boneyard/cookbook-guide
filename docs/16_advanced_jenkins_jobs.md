@@ -1,5 +1,9 @@
 ## Advanced Jenkins Jobs
-* [jenkins-job-builder](http://docs.openstack.org/infra/jenkins-job-builder/) is a `yaml` based way to configure a [Jenkins](https://jenkins.io/index.html) server
-* Having jenkins and jenkins-jobs like [this example](https://github.com/jjasghar/jenkins-jobs/blob/master/minecraft-basic.yml) can help automate validation of the cookbooks and changes from the community
-* This can be used to compliment the [Travis](https://travis-ci.org) tests
-* You can gate integration tests on public clouds with test-kitchen
+* [jenkins-job-builder][jjb] is a `yaml` based way to configure a [Jenkins](https://jenkins.io/index.html) server
+* Having jenkins and jenkins-jobs like [this example][minecraftyml] can help automate validation of the cookbooks and changes from the community
+* You can gate integration tests on public clouds with test-kitchen and Jenkins.
+* These can be used to compliment the [Travis](https://travis-ci.org) tests or
+
+
+[jjb]: http://docs.openstack.org/infra/jenkins-job-builder
+[minecraftyml]: https://github.com/jjasghar/jenkins-jobs/blob/master/minecraft-basic.yml
