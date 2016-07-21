@@ -63,7 +63,7 @@ $ cd cookbook-guide
 Build the image yourself.
 
 ```
-$ docker build -t="$USER/chef-partner-cookbook-guide" .
+$ docker build -t="$USER/chef-partner-cookbook-guide" . --no-cache
 ```
 
 After it's built, all you have to do is:
