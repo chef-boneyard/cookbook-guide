@@ -2,6 +2,6 @@
 * Contact Chef's Partner Engineering <partnereng@chef.io>.
 * Or apply through the landing page for [Partner Cookbooks](https://www.chef.io/partners/cookbooks/)
   * Discuss proposed cookbook features.
-  * Provide examples and documentatio.
+  * Provide examples and documentation.
   * Answer technical questions, code reviews, and provide feedback.
   * Help promote usage.

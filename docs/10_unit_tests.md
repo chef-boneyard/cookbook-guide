@@ -8,5 +8,5 @@
 * [betterspecs.org](https://betterspecs.org) for thoughts on better unit testing.
 * It can help to have the Coverage report in your `spec_helper.rb`.
 ```ruby
-`at_exit { ChefSpec::Coverage.report! }
+at_exit { ChefSpec::Coverage.report! }
 ```
