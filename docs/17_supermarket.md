@@ -1,9 +1,9 @@
 ## Supermarket
-* Chef's community site for sharing cookbooks
- * and other extensions
-* [supermarket.chef.io](https://supermarket.chef.io)
-* Publish your cookbook
-* Fill all the extra fields
-* "Chef Partner Cookbook" badge coming
- * Marketing will eventually add a landing page
- * filter searches to highlight these results
+* Chef's community site for sharing cookbooks.
+ * Not only cookbooks, but  other extensions too!
+* The site is: [supermarket.chef.io](https://supermarket.chef.io).
+* Please publish your cookbook here!
+* Fill all the extra fields.
+* "Chef Partner Cookbook" badge when you are certified.
+ * A list of the [Already certified cookbooks](https://supermarket.chef.io/cookbooks?utf8=%E2%9C%93&q=&badges%5B%5D=partner&platforms%5B%5D=).
+ * The main landing page for [Partner Cookbooks](https://www.chef.io/partners/cookbooks/)
