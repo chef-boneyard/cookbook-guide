@@ -1,5 +1,5 @@
 ## Ruby Style
-* [cookstyle]((https://github.com/chef/cookstyle)
+* [cookstyle](https://github.com/chef/cookstyle)
  * It is now included with the [ChefDK](https://downloads.chef.io/chef-dk/).
  * The [usage of cookstyle](https://github.com/chef/cookstyle#usage).
  * Ruby static code analyzer and style enforcement.
