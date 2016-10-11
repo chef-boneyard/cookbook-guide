@@ -6,4 +6,4 @@
 $ chef generate cookbook -g ~/cookbook-guide-generator/cookbooks your-new-cookbook-name
 ```
 * You get a skeleton of everything we mention in this presentation.
-* Fill out the TODOs and your specific code and your done!
+* Fill out the TODOs and your specific code and you're done!
