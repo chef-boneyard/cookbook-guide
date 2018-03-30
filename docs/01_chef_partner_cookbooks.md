@@ -1,8 +1,8 @@
-# Chef Partner Cookbooks
+# Chef Partner Cookbook Guide
 
-Hi from Chef's Partner Engineering Team!
+Hi from Chef's Technical Alliance Team!
 
 * Here are some standards for the Chef Partner Cookbook Program.
 * And some best practices we've found over years of writing cookbooks.
 
-<partnereng@chef.io>
+JJ Asghar <jj@chef.io>

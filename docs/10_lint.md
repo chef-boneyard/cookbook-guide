@@ -1,4 +1,5 @@
 ## Linting and Cookbook Style
+
 * [Foodcritic](http://www.foodcritic.io)
  * Now included with the [ChefDK](https://downloads.chef.io/chef-dk/).
 * Chef style guide for cookbooks.

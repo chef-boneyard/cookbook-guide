@@ -23,7 +23,7 @@ RUN cp /srv/cookbook-guide/docs/theme/chef.css /usr/lib/node_modules/reveal-md/n
 
 COPY dockerfiles/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-RUN echo "Thanks\!\n\nChef's Partner Engineering Team\n\n<partnereng@chef.io>" >> /tmp/index.md
+RUN echo "Thanks\!\n\nChef's Technical Alliance Team\n\n<partnereng@chef.io>" >> /tmp/index.md
 
 EXPOSE 1948
 
