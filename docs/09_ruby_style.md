@@ -1,6 +1,8 @@
 ## Ruby Style
+
+* If you don't have a style preference already here are policies to start with.
 * [cookstyle](https://github.com/chef/cookstyle)
- * It is now included with the [ChefDK](https://downloads.chef.io/chef-dk/).
+ * It is included with the [ChefDK](https://downloads.chef.io/chef-dk/).
  * The [usage of cookstyle](https://github.com/chef/cookstyle#usage).
  * Ruby static code analyzer and style enforcement.
 * A starter [cookstyle yml](https://github.com/chef/cookstyle/blob/master/config/cookstyle_base.yml) should be located at: `./.rubocop.yml`.

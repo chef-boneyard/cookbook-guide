@@ -1,4 +1,5 @@
 ## Advanced Jenkins Jobs
+
 * [jenkins-job-builder][jjb] is a `yaml` based way to configure a [Jenkins](https://jenkins.io/index.html) server.
 * Having jenkins and jenkins-jobs like [this example][minecraftyml] can help automate validation of the cookbooks and changes from the community.
 * You can gate integration tests on public clouds with test-kitchen and Jenkins.

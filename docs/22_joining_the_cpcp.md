@@ -1,5 +1,6 @@
 ## Joining the Chef Partner Cookbook Program
-* Contact Chef's Partner Engineering <partnereng@chef.io>.
+
+* Contact JJ to say you're ready for validation <jj@chef.io>.
 * Or apply through the landing page for [Partner Cookbooks](https://www.chef.io/partners/cookbooks/)
   * Discuss proposed cookbook features.
   * Provide examples and documentation.

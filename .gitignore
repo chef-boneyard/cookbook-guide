@@ -1,2 +1,5 @@
 .vagrant
 nodes/vagrant*
+.direnv/
+.envrc
+.ruby-version
